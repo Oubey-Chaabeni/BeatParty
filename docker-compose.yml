@@ -1,0 +1,8 @@
+services:
+  activemq:
+    image: apache/activemq-classic:5.18.4
+    container_name: beatparty-activemq
+    ports:
+      - "61616:61616"   # OpenWire JMS port
+      - "8161:8161"     # ActiveMQ Web Console
+    restart: unless-stopped
